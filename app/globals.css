@@ -65,12 +65,11 @@ body {
     @apply bg-gradient-to-l from-electric via-brand-400 to-brand-200 bg-clip-text text-transparent;
   }
 
+  /* Visible by default; the animation only enhances. Never depends on JS,
+     so the page can never render blank. */
   .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  .reveal.is-in {
-    animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 1;
+    animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .stagger-1 { animation-delay: 0.06s; }
@@ -83,6 +82,5 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; }
-  .reveal.is-in { animation: none; }
+  .reveal { opacity: 1; transform: none; animation: none; }
 }

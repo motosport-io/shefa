@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-label="GREENMAN">
+  <rect x="6" y="30" width="608" height="90" rx="45" fill="#111111"/>
+  <text x="310" y="97" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="72" font-weight="900" letter-spacing="2"
+        fill="#c6c9ce" stroke="#000000" stroke-width="2">GREENMAN</text>
+</svg>

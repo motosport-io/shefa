@@ -81,14 +81,27 @@ function ImageFrame({ src, alt, className = "", priority = false }) {
   );
 }
 
-function BrandLogo({ name, light = false }) {
+const BRAND_LOGOS = {
+  GOUPIL: "/logos/goupil.svg",
+  GREENMAN: "/logos/greenman.svg",
+  POLARIS: "/logos/polaris.svg",
+};
+
+function BrandLogo({ name, className = "h-6" }) {
+  const src = BRAND_LOGOS[name];
   return (
-    <span
-      className={`inline-flex items-center rounded-lg px-3.5 py-1.5 text-sm font-black tracking-wide ${
-        light ? "bg-white/10 text-white/80" : "bg-slate-100 text-slate-600"
-      }`}
-    >
-      {name}
+    <span className="inline-flex items-center rounded-lg bg-white px-3 py-2 shadow-sm ring-1 ring-black/5">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={name}
+        className={`${className} w-auto`}
+        onError={(e) => {
+          e.currentTarget.style.display = "none";
+          e.currentTarget.nextElementSibling.style.display = "inline";
+        }}
+      />
+      <span className="hidden text-sm font-black tracking-wide text-slate-700">{name}</span>
     </span>
   );
 }
