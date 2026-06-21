@@ -82,15 +82,15 @@ function ImageFrame({ src, alt, className = "", priority = false }) {
 }
 
 const BRAND_LOGOS = {
-  GOUPIL: "/logos/goupil.svg",
-  GREENMAN: "/logos/greenman.svg",
-  POLARIS: "/logos/polaris.svg",
+  GOUPIL: "/logos/goupil.png",
+  GREENMAN: "/logos/greenman.png",
+  POLARIS: "/logos/polaris.png",
 };
 
-function BrandLogo({ name, className = "h-6" }) {
+function BrandLogo({ name, className = "h-6 sm:h-7" }) {
   const src = BRAND_LOGOS[name];
   return (
-    <span className="inline-flex items-center rounded-lg bg-white px-3 py-2 shadow-sm ring-1 ring-black/5">
+    <span className="inline-flex items-center rounded-lg bg-white px-3 py-1.5 shadow-sm ring-1 ring-black/5">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
@@ -166,17 +166,19 @@ export default function Page() {
       >
         <div className="container-page flex h-[72px] items-center justify-between gap-3">
           <a href="#top" className="flex items-center gap-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logos/dlb-motosport.svg"
-              alt="DLB Motosport"
-              className="h-9 w-auto"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-                e.currentTarget.nextElementSibling.style.display = "inline";
-              }}
-            />
-            <span className="hidden text-lg font-black text-brand">DLB&nbsp;Motosport</span>
+            <span className="inline-flex items-center rounded-lg bg-white px-2.5 py-1.5 shadow-sm ring-1 ring-black/5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logos/dlb-motosport.png"
+                alt="DLB Motosport"
+                className="h-7 w-auto sm:h-8"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  e.currentTarget.nextElementSibling.style.display = "inline";
+                }}
+              />
+              <span className="hidden text-lg font-black text-brand">DLB&nbsp;Motosport</span>
+            </span>
           </a>
 
           <nav className="hidden items-center gap-1 md:flex">
@@ -384,9 +386,8 @@ export default function Page() {
               </p>
             </Reveal>
 
-            <Reveal className="mt-10 grid gap-4 sm:grid-cols-2">
-              <ImageFrame src="/images/greenman-uf2-1.webp" alt="GREENMAN UF2+2 — מבט קדמי" className="aspect-[4/3]" />
-              <ImageFrame src="/images/greenman-uf2-2.webp" alt="GREENMAN UF2+2 — מבט צד" className="aspect-[4/3]" />
+            <Reveal className="mt-10">
+              <ImageFrame src="/images/greenman-uf2-1.webp" alt="GREENMAN UF2+2" className="aspect-[16/10]" />
             </Reveal>
 
             <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
@@ -494,9 +495,8 @@ export default function Page() {
             </p>
           </Reveal>
 
-          <Reveal className="mt-10 grid gap-4 sm:grid-cols-2">
-            <ImageFrame src="/images/polaris-ranger-1.webp" alt="Polaris Ranger Diesel — מבט קדמי" className="aspect-[4/3]" />
-            <ImageFrame src="/images/polaris-ranger-2.webp" alt="Polaris Ranger Diesel — בשטח" className="aspect-[4/3]" />
+          <Reveal className="mt-10">
+            <ImageFrame src="/images/polaris-ranger-1.webp" alt="Polaris Ranger Diesel 2026" className="aspect-[16/10]" />
           </Reveal>
 
           <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
