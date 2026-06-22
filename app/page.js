@@ -81,21 +81,36 @@ function ImageFrame({ src, alt, className = "", priority = false }) {
   );
 }
 
-const BRAND_LOGOS = {
-  GOUPIL: "/logos/goupil.png",
-  GREENMAN: "/logos/greenman.png",
-  POLARIS: "/logos/polaris.png",
+// Per-logo render geometry. Box = visible mark footprint (clips transparent
+// padding via overflow-hidden); img height is scaled so the visible mark stays
+// the same size across assets with different canvases/padding (no size jump).
+// "normal" = for light backgrounds, "white" = for dark backgrounds.
+const LOGOS = {
+  GOUPIL: {
+    normal: { src: "/logos/goupil.png", box: "w-[80px] sm:w-[94px]", img: "h-6 sm:h-7" },
+    white: { src: "/logos/goupil-white.png", box: "w-[83px] sm:w-[95px]", img: "h-[29px] sm:h-[33px]" },
+  },
+  GREENMAN: {
+    normal: { src: "/logos/NEW%20GREENMAN.png", box: "w-[146px] sm:w-[171px]", img: "h-[171px] sm:h-[200px]" },
+    white: { src: "/logos/NEW%20GREENMAN.png", box: "w-[146px] sm:w-[171px]", img: "h-[171px] sm:h-[200px]" },
+  },
+  POLARIS: {
+    normal: { src: "/logos/polaris.png", box: "w-[101px] sm:w-[118px]", img: "h-6 sm:h-7" },
+    white: { src: "/logos/polaris-white.png", box: "w-[101px] sm:w-[118px]", img: "h-[36px] sm:h-[42px]" },
+  },
 };
 
-function BrandLogo({ name, className = "h-6 sm:h-7" }) {
-  const src = BRAND_LOGOS[name];
+function BrandLogo({ name, light = false }) {
+  const cfg = LOGOS[name][light ? "white" : "normal"];
   return (
-    <span className="inline-flex items-center">
+    <span
+      className={`inline-flex h-6 shrink-0 items-center justify-center overflow-hidden sm:h-7 ${cfg.box}`}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={src}
+        src={cfg.src}
         alt={name}
-        className={`${className} w-auto`}
+        className={`${cfg.img} w-auto max-w-none shrink-0`}
         onError={(e) => {
           e.currentTarget.style.display = "none";
           e.currentTarget.nextElementSibling.style.display = "inline";
