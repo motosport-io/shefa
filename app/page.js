@@ -170,7 +170,7 @@ export default function Page() {
             <img
               src="/logos/dlb-motosport.png"
               alt="DLB Motosport — The Best Adventure You Can Get"
-              className="h-14 w-auto sm:h-16"
+              className="h-16 w-auto sm:h-20 lg:h-24"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
                 e.currentTarget.nextElementSibling.style.display = "inline";
