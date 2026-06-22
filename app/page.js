@@ -166,19 +166,17 @@ export default function Page() {
       >
         <div className="container-page flex h-[72px] items-center justify-between gap-3">
           <a href="#top" className="flex items-center gap-2">
-            <span className="inline-flex items-center rounded-lg bg-white px-2.5 py-1.5 shadow-sm ring-1 ring-black/5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logos/dlb-motosport.png"
-                alt="DLB Motosport"
-                className="h-7 w-auto sm:h-8"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                  e.currentTarget.nextElementSibling.style.display = "inline";
-                }}
-              />
-              <span className="hidden text-lg font-black text-brand">DLB&nbsp;Motosport</span>
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logos/dlb-motosport.png"
+              alt="DLB Motosport — The Best Adventure You Can Get"
+              className="h-14 w-auto sm:h-16"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+                e.currentTarget.nextElementSibling.style.display = "inline";
+              }}
+            />
+            <span className="hidden text-lg font-black text-brand">DLB&nbsp;Motosport</span>
           </a>
 
           <nav className="hidden items-center gap-1 md:flex">
