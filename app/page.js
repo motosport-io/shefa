@@ -170,7 +170,11 @@ export default function Page() {
             <img
               src={scrolled ? "/logos/dlb-motosport-dark.png" : "/logos/dlb-motosport.png"}
               alt="DLB Motosport — The Best Adventure You Can Get"
-              className="h-16 w-auto sm:h-20 lg:h-24"
+              className={
+                scrolled
+                  ? "h-8 w-auto sm:h-10 lg:h-12" // black logo is tightly cropped — ~half height to match the padded white logo's visible footprint
+                  : "h-16 w-auto sm:h-20 lg:h-24"
+              }
               onError={(e) => {
                 if (e.currentTarget.src.includes("dlb-motosport-dark")) {
                   // black variant not present yet — fall back to the white logo
