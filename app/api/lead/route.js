@@ -63,7 +63,7 @@ export async function POST(request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.FROM || "DLB Motosport <onboarding@resend.dev>";
-  const to = process.env.TO || "info2@motosport.co.il";
+  const to = process.env.TO || "royso@lubinski.co.il";
 
   const subject = `ליד חדש מדף הרשויות — ${vehicle}`;
   const rows = [

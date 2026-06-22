@@ -52,7 +52,7 @@ export default function LeadForm({ vehicle, onVehicleChange }) {
       setErrorMsg(
         err.message && err.message !== "send_failed"
           ? err.message
-          : "אירעה תקלה בשליחה. נסו שוב או חייגו 050-363-6365."
+          : "אירעה תקלה בשליחה. נסו שוב או חייגו 050-36-36-365."
       );
     }
   }

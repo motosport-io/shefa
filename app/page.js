@@ -5,7 +5,7 @@ import * as I from "@/components/icons";
 import LeadForm from "@/components/LeadForm";
 import Reveal from "@/components/Reveal";
 
-const PHONE_DISPLAY = "050-363-6365";
+const PHONE_DISPLAY = "050-36-36-365";
 const PHONE_TEL = "0503636365";
 
 const NAV = [
@@ -223,7 +223,7 @@ export default function Page() {
             <div>
               <Reveal className="eyebrow border-white/15 bg-white/10 text-white">
                 <span className="h-2 w-2 rounded-full bg-electric shadow-glow" />
-                לרשויות מקומיות ועיריות
+                למועצות ועיריות
               </Reveal>
               <Reveal as="h1" delay={1} className="mt-6 text-4xl font-black leading-[1.1] tracking-tight sm:text-6xl">
                 פתרונות רכב תפעולי
@@ -231,8 +231,8 @@ export default function Page() {
                 <span className="text-gradient">לרשויות מקומיות</span>
               </Reveal>
               <Reveal as="p" delay={2} className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-                שלושה כלים, שלושה צרכים — ניקיון, תחזוקה ושטח. בחשמל מלא או בדיזל,
-                בהתאמה למשימה.
+                ניקיון, שינוע ואחזקה — לכביש, לשטח התפעולי או לשטח. בחשמל מלא או
+                בדיזל, בהתאמה למשימה.
               </Reveal>
               <Reveal delay={3} className="mt-8 flex flex-wrap items-center gap-3">
                 <button onClick={() => goToForm()} className="btn-light">
@@ -317,7 +317,7 @@ export default function Page() {
               brand="GOUPIL"
               badge="חשמלי 100%"
               badgeClass="border-sky-200 bg-sky-50 text-sky-700"
-              subtitle="רכב תפעולי חשמלי קומפקטי"
+              subtitle="רכב משא חשמלי עירוני קומפקטי, מודולרי, עם יכולת העמסה גבוהה"
             />
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
               רכב תפעולי חשמלי 100% לעבודות ניקיון, תחזוקה ולוגיסטיקה עירונית. מודולרי,
@@ -351,10 +351,15 @@ export default function Page() {
           />
 
           <Reveal className="mt-8 flex flex-col gap-4 rounded-2xl border border-sky-100 bg-sky-50/60 p-5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-[15px] text-slate-600">
-              מגוון תצורות מרכב: ארגז סגור, טיפר, מערכת השקיה/שטיפה ועוד — מותאם
-              לצורכי הרשות.
-            </p>
+            <div className="space-y-2">
+              <p className="text-[15px] text-slate-600">
+                ארגז סגור, ארגז פתוח, ארגז מתרומם, מערכת שטיפה/השקיה ועוד — מותאם
+                לצורכי הרשות.
+              </p>
+              <p className="text-[15px] font-bold text-brand">
+                מגוון אפשרויות רכישה או ליסינג תפעולי מלא
+              </p>
+            </div>
             <button onClick={() => goToForm("Goupil G4")} className="btn-primary shrink-0">
               בקשת הצעה / תיאום הדגמה
               <I.ArrowLeft className="h-5 w-5" />
@@ -377,7 +382,7 @@ export default function Page() {
                 brand="GREENMAN"
                 badge="חשמלי"
                 badgeClass="border-emerald-200 bg-emerald-50 text-emerald-700"
-                subtitle="הרכב התפעולי הקומפקטי"
+                subtitle="הרכב התפעולי החשמלי לשטח התפעולי"
               />
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
                 הכלי האידיאלי למי שצריך רכב תפעולי קומפקטי אך רב-תכליתי, המשלב שלדת
@@ -442,7 +447,7 @@ export default function Page() {
                 <h3 className="mb-5 text-2xl font-black text-ink">אבזור</h3>
                 <div className="flex flex-wrap gap-2.5">
                   {[
-                    'חישוקי אלומיניום 10"',
+                    'חישוקי אלומיניום 14"',
                     "ריפודים מפוארים",
                     "מדרכי צד",
                     "פגוש קדמי",
@@ -535,10 +540,15 @@ export default function Page() {
           </Reveal>
 
           <Reveal className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-xl text-sm text-slate-500">
-              התמונות להמחשה בלבד · ייתכן שחלק מהצבעים/המפרטים כרוכים בתוספת תשלום ·
-              המחיר אינו כולל אגרות רישוי · ט.ל.ח.
-            </p>
+            <div className="space-y-2">
+              <p className="text-[15px] font-bold text-amber-700">
+                מגוון אפשרויות רכישה או ליסינג תפעולי מלא
+              </p>
+              <p className="max-w-xl text-sm text-slate-500">
+                התמונות להמחשה בלבד · ייתכן שחלק מהצבעים/המפרטים כרוכים בתוספת תשלום ·
+                המחיר אינו כולל אגרות רישוי · ט.ל.ח.
+              </p>
+            </div>
             <button onClick={() => goToForm("Polaris Ranger Diesel 2026")} className="btn-primary shrink-0">
               בקשת הצעה / תיאום הדגמה
               <I.ArrowLeft className="h-5 w-5" />
@@ -680,11 +690,11 @@ export default function Page() {
                 לפניות אישיות: {PHONE_DISPLAY}
               </a>
               <a
-                href="mailto:info2@motosport.co.il"
+                href="mailto:royso@lubinski.co.il"
                 className="inline-flex items-center gap-1.5 hover:text-white"
               >
                 <I.Mail className="h-4 w-4" />
-                info2@motosport.co.il
+                royso@lubinski.co.il
               </a>
             </div>
             <p className="text-xs text-slate-500">

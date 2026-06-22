@@ -17,7 +17,7 @@ npm run build    # production build
 ## Lead form / email
 
 The form POSTs JSON to the serverless route **`/api/lead`** (`app/api/lead/route.js`),
-which emails the lead to `info2@motosport.co.il` via [Resend](https://resend.com)
+which emails the lead to `royso@lubinski.co.il` via [Resend](https://resend.com)
 using the REST API (no extra dependency). The API key is read server-side only
 and never exposed to the client. Includes field validation + a honeypot anti-spam
 field.
@@ -34,7 +34,7 @@ Add these in **Vercel → Project → Settings → Environment Variables**
 |---|---|---|
 | `RESEND_API_KEY` | yes (for live email) | Resend API key (`re_...`). |
 | `FROM` | recommended | Verified sender, e.g. `DLB Motosport <leads@yourdomain.co.il>`. Defaults to `onboarding@resend.dev`. |
-| `TO` | optional | Recipient. Defaults to `info2@motosport.co.il`. |
+| `TO` | optional | Recipient. Defaults to `royso@lubinski.co.il`. |
 
 The email subject is `ליד חדש מדף הרשויות — {כלי מבוקש}` and the body lists all
 five fields plus a timestamp in Asia/Jerusalem time.
