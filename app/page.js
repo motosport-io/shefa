@@ -168,12 +168,17 @@ export default function Page() {
           <a href="#top" className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logos/dlb-motosport.png"
+              src={scrolled ? "/logos/dlb-motosport-dark.png" : "/logos/dlb-motosport.png"}
               alt="DLB Motosport — The Best Adventure You Can Get"
               className="h-16 w-auto sm:h-20 lg:h-24"
               onError={(e) => {
-                e.currentTarget.style.display = "none";
-                e.currentTarget.nextElementSibling.style.display = "inline";
+                if (e.currentTarget.src.includes("dlb-motosport-dark")) {
+                  // black variant not present yet — fall back to the white logo
+                  e.currentTarget.src = "/logos/dlb-motosport.png";
+                } else {
+                  e.currentTarget.style.display = "none";
+                  e.currentTarget.nextElementSibling.style.display = "inline";
+                }
               }}
             />
             <span className="hidden text-lg font-black text-brand">DLB&nbsp;Motosport</span>
