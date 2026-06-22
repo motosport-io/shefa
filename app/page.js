@@ -90,7 +90,7 @@ const BRAND_LOGOS = {
 function BrandLogo({ name, className = "h-6 sm:h-7" }) {
   const src = BRAND_LOGOS[name];
   return (
-    <span className="inline-flex items-center rounded-lg bg-white px-3 py-1.5 shadow-sm ring-1 ring-black/5">
+    <span className="inline-flex items-center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
