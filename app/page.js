@@ -350,7 +350,7 @@ export default function Page() {
           {/* Gallery */}
           <Reveal className="mt-10 grid gap-4 lg:grid-cols-4">
             <ImageFrame
-              src="/images/G4M_Fourgon_45.webp"
+              src="/images/G4M-fourgon-45-v2.png"
               alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה"
               className="aspect-[16/10] lg:col-span-4"
             />
