@@ -526,7 +526,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal className="mt-10">
-            <ImageFrame src="/images/polaris-ranger-1.webp" alt="Polaris Ranger Diesel 2026" className="aspect-[16/10]" />
+            <ImageFrame src="/images/polaris-ranger-hero-v3.png" alt="Polaris Ranger Diesel 2026" className="aspect-[16/10]" />
           </Reveal>
 
           <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
