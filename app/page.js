@@ -304,7 +304,7 @@ export default function Page() {
                   </div>
                   <div style={{ "--accent": ACCENTS.polaris }}>
                     <ImageFrame
-                      src="/images/polaris-ranger-hero-v2.png"
+                      src="/images/polaris-ranger-hero-v3.png"
                       alt="Polaris Ranger Diesel"
                       className="aspect-[4/3] !border-white/10 !bg-white"
                     />
