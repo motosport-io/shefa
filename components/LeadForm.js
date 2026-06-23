@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import * as I from "@/components/icons";
+import LegalModal from "@/components/LegalModal";
 
 const VEHICLES = [
   "Goupil G4",
@@ -169,6 +170,8 @@ export default function LeadForm({ vehicle, onVehicleChange }) {
       <button type="submit" disabled={status === "sending"} className="btn-primary w-full disabled:opacity-60">
         {status === "sending" ? "שולח…" : "שליחה"}
       </button>
+
+      <LegalModal />
     </form>
   );
 }
