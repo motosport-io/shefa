@@ -61,9 +61,9 @@ export async function POST(request) {
     timeStyle: "medium",
   }).format(new Date());
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.FROM || "DLB Motosport <onboarding@resend.dev>";
-  const to = process.env.TO || "royso@lubinski.co.il";
+  const apiKey = (process.env.RESEND_API_KEY || "").trim();
+  const from = (process.env.FROM || "DLB Motosport <onboarding@resend.dev>").trim();
+  const to = (process.env.TO || "royso@lubinski.co.il").trim();
 
   const subject = `ליד חדש מדף הרשויות — ${vehicle}`;
   const rows = [
@@ -97,6 +97,18 @@ export async function POST(request) {
   if (!apiKey) {
     console.warn("[lead] RESEND_API_KEY missing — lead not emailed:", text);
     return NextResponse.json({ ok: true, delivered: false });
+  }
+
+  // The Authorization header must be an ASCII ByteString. If the configured key
+  // contains non-ASCII characters (e.g. a wrong/garbled value pasted into the
+  // env var), fetch would throw "Cannot convert argument to a ByteString"
+  // before any request is sent. Fail gracefully with a clear log instead.
+  if (!/^[\x20-\x7E]+$/.test(apiKey)) {
+    console.error(
+      "[lead] RESEND_API_KEY contains non-ASCII characters — re-enter a clean re_... key in the Vercel env. Lead not emailed:",
+      text
+    );
+    return NextResponse.json({ ok: false, error: "send_failed" }, { status: 500 });
   }
 
   try {
