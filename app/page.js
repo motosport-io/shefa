@@ -253,7 +253,7 @@ export default function Page() {
                 <span className="text-gradient">לרשויות מקומיות</span>
               </Reveal>
               <Reveal as="p" delay={2} className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-                ניקיון, שינוע ואחזקה — לכביש, לשטח התפעולי או לשטח. בחשמל מלא או
+                ניקיון, שינוע ואחזקה - לכביש, לשטח התפעולי או לשטח. בחשמל מלא או
                 בדיזל, בהתאמה למשימה.
               </Reveal>
               <Reveal delay={3} className="mt-8 flex flex-wrap items-center gap-3">
@@ -378,7 +378,7 @@ export default function Page() {
           <Reveal className="mt-8 flex flex-col gap-4 rounded-2xl border border-sky-100 bg-sky-50/60 p-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
               <p className="text-[15px] text-slate-600">
-                ארגז סגור, ארגז פתוח, ארגז מתרומם, מערכת שטיפה/השקיה ועוד — מותאם
+                ארגז סגור, ארגז פתוח, ארגז מתרומם, מערכת שטיפה/השקיה ועוד - מותאם
                 לצורכי הרשות.
               </p>
               <p className="text-[15px] font-bold text-brand">
@@ -425,9 +425,9 @@ export default function Page() {
               items={[
                 { Icon: I.Feather, text: "שלדת אלומיניום קלת משקל" },
                 { Icon: I.Battery, text: "סוללת ליתיום 48V 105Ah" },
-                { Icon: I.Users, text: "תצורת 2+2 — עד 4 נוסעים" },
+                { Icon: I.Users, text: "תצורת 2+2 - עד 4 נוסעים" },
                 { Icon: I.Route, text: 'טווח נסיעה עד 60 ק"מ' },
-                { Icon: I.Clock, text: "זמן טעינה 2–4 שעות" },
+                { Icon: I.Clock, text: "זמן טעינה 2-4 שעות" },
                 { Icon: I.Camera, text: "מצלמת רוורס + צג דיגיטלי" },
                 { Icon: I.Shield, text: "2 שנות אחריות + 5 שנים על הסוללה" },
               ]}
@@ -449,7 +449,7 @@ export default function Page() {
                         ["מתלה קדמי", "עצמאי מקפרסון"],
                         ["מתלה אחורי", "קפיץ רב-שכבתי + בולם הידראולי"],
                         ["טווח נסיעה", 'עד 60 ק"מ'],
-                        ["זמן טעינה", "2–4 שעות"],
+                        ["זמן טעינה", "2-4 שעות"],
                         ["כושר העמסה (כולל נוסעים)", '360 ק"ג'],
                         ["בסיס גלגלים", '1700 מ"מ'],
                         ["משקל עצמי (כולל סוללה)", '480 ק"ג'],
@@ -544,7 +544,7 @@ export default function Page() {
 
           <Reveal className="mt-8 overflow-hidden rounded-2xl border border-amber-100 bg-gradient-to-l from-amber-50 to-white p-6 text-[15px] leading-relaxed text-slate-700">
             לריינג&apos;ר דיזל מערכות טכנולוגיות רבות: הגה חשמלי (EPS), מערכת בקרת ירידות
-            (ADS) ומערכת בלימת מנוע (EBS) — שמאפשרות עבודה בטוחה ונוחה לאורך כל יום
+            (ADS) ומערכת בלימת מנוע (EBS) - שמאפשרות עבודה בטוחה ונוחה לאורך כל יום
             העבודה. מרווח טיפולים של 200 שעות מתורגם לחיסכון כספי משמעותי.
           </Reveal>
 
