@@ -348,15 +348,18 @@ export default function Page() {
           </Reveal>
 
           {/* Gallery */}
-          <Reveal className="mt-10 grid gap-4 lg:grid-cols-4">
+          <Reveal className="mt-10 space-y-4">
             <ImageFrame
               src="/images/G4M-fourgon-45-v2.png"
               alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה"
-              className="aspect-[16/10] lg:col-span-4"
+              className="aspect-[16/10]"
             />
-            <ImageFrame src="/images/G4M_PB_Box_90.webp" alt="מרכב הטיה (טיפר) עם ארגז כלים" className="aspect-[4/3] lg:col-span-2" />
-            <ImageFrame src="/images/G4M_Arrosage_45.webp" alt="תצורת השקיה/שטיפה עם גלגלת צינור ומיכל מים" className="aspect-[4/3]" />
-            <ImageFrame src="/images/G4M_HP_90.webp" alt="תצורת שטיפה בלחץ גבוה עם כלוב רשת" className="aspect-[4/3]" />
+            <div className="grid grid-cols-2 gap-4">
+              <ImageFrame src="/images/G4M_PB_Box_90.webp" alt="מרכב הטיה (טיפר) עם ארגז כלים" className="aspect-[4/3]" />
+              <ImageFrame src="/images/G4M_Arrosage_45.webp" alt="תצורת השקיה/שטיפה עם גלגלת צינור ומיכל מים" className="aspect-[4/3]" />
+              <ImageFrame src="/images/G4M_HP_90.webp" alt="תצורת שטיפה בלחץ גבוה עם כלוב רשת" className="aspect-[4/3]" />
+              <ImageFrame src="/images/G4M-fourgon-45-v2.png" alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה" className="aspect-[4/3]" />
+            </div>
           </Reveal>
 
           <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
