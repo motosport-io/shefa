@@ -354,7 +354,7 @@ export default function Page() {
               alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה"
               className="aspect-[16/10]"
             />
-            <div className="grid grid-cols-2 gap-4 lg:mx-auto lg:max-w-2xl">
+            <div className="grid grid-cols-2 gap-4 lg:mx-auto lg:max-w-3xl">
               <ImageFrame src="/images/G4M_PB_Box_90.webp" alt="מרכב הטיה (טיפר) עם ארגז כלים" className="aspect-[4/3]" />
               <ImageFrame src="/images/G4M_Arrosage_45.webp" alt="תצורת השקיה/שטיפה עם גלגלת צינור ומיכל מים" className="aspect-[4/3]" />
               <ImageFrame src="/images/G4M_HP_90.webp" alt="תצורת שטיפה בלחץ גבוה עם כלוב רשת" className="aspect-[4/3]" />
