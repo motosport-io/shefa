@@ -87,16 +87,16 @@ function ImageFrame({ src, alt, className = "", priority = false }) {
 // "normal" = for light backgrounds, "white" = for dark backgrounds.
 const LOGOS = {
   GOUPIL: {
-    normal: { src: "/logos/goupil.png", box: "w-[80px] sm:w-[94px]", img: "h-6 sm:h-7" },
-    white: { src: "/logos/goupil-white.png", box: "w-[83px] sm:w-[95px]", img: "h-[29px] sm:h-[33px]" },
+    normal: { src: "/logos/goupil.webp", box: "w-[80px] sm:w-[94px]", img: "h-6 sm:h-7" },
+    white: { src: "/logos/goupil-white.webp", box: "w-[83px] sm:w-[95px]", img: "h-[29px] sm:h-[33px]" },
   },
   GREENMAN: {
-    normal: { src: "/logos/GREENMAN%20LOGO.png", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
-    white: { src: "/logos/GREENMAN%20LOGO.png", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
+    normal: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
+    white: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
   },
   POLARIS: {
-    normal: { src: "/logos/polaris.png", box: "w-[101px] sm:w-[118px]", img: "h-6 sm:h-7" },
-    white: { src: "/logos/polaris-white.png", box: "w-[101px] sm:w-[118px]", img: "h-[36px] sm:h-[42px]" },
+    normal: { src: "/logos/polaris.webp", box: "w-[101px] sm:w-[118px]", img: "h-6 sm:h-7" },
+    white: { src: "/logos/polaris-white.webp", box: "w-[101px] sm:w-[118px]", img: "h-[36px] sm:h-[42px]" },
   },
 };
 
@@ -183,7 +183,7 @@ export default function Page() {
           <a href="#top" className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={scrolled ? "/logos/dlb-motosport-dark.png" : "/logos/dlb-motosport.png"}
+              src={scrolled ? "/logos/dlb-motosport-dark.webp" : "/logos/dlb-motosport.webp"}
               alt="DLB Motosport — The Best Adventure You Can Get"
               className={
                 scrolled
@@ -193,7 +193,7 @@ export default function Page() {
               onError={(e) => {
                 if (e.currentTarget.src.includes("dlb-motosport-dark")) {
                   // black variant not present yet — fall back to the white logo
-                  e.currentTarget.src = "/logos/dlb-motosport.png";
+                  e.currentTarget.src = "/logos/dlb-motosport.webp";
                 } else {
                   e.currentTarget.style.display = "none";
                   e.currentTarget.nextElementSibling.style.display = "inline";
@@ -288,7 +288,7 @@ export default function Page() {
               <div className="relative animate-float-slow rounded-[2rem] border border-white/15 bg-white/5 p-3 shadow-float backdrop-blur">
                 <div style={{ "--accent": ACCENTS.goupil }}>
                   <ImageFrame
-                    src="/images/g4-hp500-v3.png"
+                    src="/images/g4-hp500-v3.webp"
                     alt="Goupil G4 — תיבה סגורה"
                     className="aspect-[16/11] !border-white/10 !bg-white"
                     priority
@@ -304,7 +304,7 @@ export default function Page() {
                   </div>
                   <div style={{ "--accent": ACCENTS.polaris }}>
                     <ImageFrame
-                      src="/images/polaris-ranger-hero-v3.png"
+                      src="/images/polaris-ranger-hero-v3.webp"
                       alt="Polaris Ranger Diesel"
                       className="aspect-[4/3] !border-white/10 !bg-white"
                     />
@@ -350,7 +350,7 @@ export default function Page() {
           {/* Gallery */}
           <Reveal className="mt-10 space-y-4">
             <ImageFrame
-              src="/images/G4M-PBL-45-v2.png"
+              src="/images/G4M-PBL-45-v2.webp"
               alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה"
               className="aspect-[16/10]"
             />
@@ -358,7 +358,7 @@ export default function Page() {
               <ImageFrame src="/images/G4M_PB_Box_90.webp" alt="מרכב הטיה (טיפר) עם ארגז כלים" className="aspect-[4/3]" />
               <ImageFrame src="/images/G4M_Arrosage_45.webp" alt="תצורת השקיה/שטיפה עם גלגלת צינור ומיכל מים" className="aspect-[4/3]" />
               <ImageFrame src="/images/G4M_HP_90.webp" alt="תצורת שטיפה בלחץ גבוה עם כלוב רשת" className="aspect-[4/3]" />
-              <ImageFrame src="/images/G4M-fourgon-45-v2.png" alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה" className="aspect-[4/3]" />
+              <ImageFrame src="/images/G4M-fourgon-45-v2.webp" alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה" className="aspect-[4/3]" />
             </div>
           </Reveal>
 
@@ -526,7 +526,7 @@ export default function Page() {
           </Reveal>
 
           <Reveal className="mt-10">
-            <ImageFrame src="/images/polaris-ranger-hero-v3.png" alt="Polaris Ranger Diesel 2026" className="aspect-[16/10]" />
+            <ImageFrame src="/images/polaris-ranger-hero-v3.webp" alt="Polaris Ranger Diesel 2026" className="aspect-[16/10]" />
           </Reveal>
 
           <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
@@ -702,7 +702,7 @@ export default function Page() {
               <span className="inline-flex h-7 w-[130px] shrink-0 items-center justify-center overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logos/dlb-motosport.png"
+                src="/logos/dlb-motosport.webp"
                 alt="DLB Motosport"
                 className="h-[72px] w-auto max-w-none shrink-0"
               />
