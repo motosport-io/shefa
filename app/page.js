@@ -288,7 +288,7 @@ export default function Page() {
               <div className="relative animate-float-slow rounded-[2rem] border border-white/15 bg-white/5 p-3 shadow-float backdrop-blur">
                 <div style={{ "--accent": ACCENTS.goupil }}>
                   <ImageFrame
-                    src="/images/G4%20-%20hp500%202.png"
+                    src="/images/g4-hp500-v3.png"
                     alt="Goupil G4 — תיבה סגורה"
                     className="aspect-[16/11] !border-white/10 !bg-white"
                     priority
