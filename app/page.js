@@ -350,7 +350,7 @@ export default function Page() {
           {/* Gallery */}
           <Reveal className="mt-10 space-y-4">
             <ImageFrame
-              src="/images/G4M-fourgon-45-v2.png"
+              src="/images/G4M-PBL-45-v2.png"
               alt="Goupil G4 — תיבה סגורה / מרכב ארגז עם תריס גלילה"
               className="aspect-[16/10]"
             />
