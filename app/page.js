@@ -696,7 +696,14 @@ export default function Page() {
         <div className="container-page">
           <div className="flex flex-col items-center gap-7 text-center">
             <div className="flex flex-wrap items-center justify-center gap-3">
-              <span className="text-xl font-black text-white">DLB Motosport</span>
+              <span className="inline-flex h-7 w-[130px] shrink-0 items-center justify-center overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logos/dlb-motosport.png"
+                alt="DLB Motosport"
+                className="h-[72px] w-auto max-w-none shrink-0"
+              />
+            </span>
               <span className="text-slate-600">|</span>
               <span className="text-sm font-bold text-slate-400">מותגים:</span>
               <BrandLogo name="GOUPIL" light />
