@@ -30,8 +30,8 @@ export const metadata = {
     images: [
       {
         url: "/og-banner.jpg",
-        width: 1000,
-        height: 300,
+        width: 1200,
+        height: 630,
         alt: "מוטוספורט — נבחרת מנצחת: שפע פתרונות תפעוליים",
       },
     ],
