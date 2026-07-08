@@ -21,8 +21,8 @@ export const metadata = {
   description:
     "שלושה כלים תפעוליים לרשויות מקומיות בישראל: Goupil G4 חשמלי, GREENMAN UF2+2 חשמלי ו-Polaris Ranger Diesel 2026. ניקיון, תחזוקה ושטח — בחשמל מלא או בדיזל.",
   openGraph: {
-    title: "לפרטים נוספים לחץ כאן",
-    description: "מוטוספורט · קבוצת דוד לובינסקי",
+    title: "DLB Motosport — רכב תפעולי לרשויות מקומיות",
+    description: "לחץ כאן לפרטים נוספים",
     url: "/",
     siteName: "DLB Motosport",
     locale: "he_IL",
@@ -30,16 +30,16 @@ export const metadata = {
     images: [
       {
         url: "/og-banner.jpg",
-        width: 1200,
-        height: 630,
+        width: 1080,
+        height: 1080,
         alt: "מוטוספורט — נבחרת מנצחת: שפע פתרונות תפעוליים",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "לפרטים נוספים לחץ כאן",
-    description: "מוטוספורט · קבוצת דוד לובינסקי",
+    title: "DLB Motosport — רכב תפעולי לרשויות מקומיות",
+    description: "לחץ כאן לפרטים נוספים",
     images: ["/og-banner.jpg"],
   },
 };
