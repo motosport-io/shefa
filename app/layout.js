@@ -16,15 +16,31 @@ const assistant = Assistant({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://shefa-gamma.vercel.app"),
   title: "DLB Motosport — פתרונות רכב תפעולי לרשויות מקומיות",
   description:
     "שלושה כלים תפעוליים לרשויות מקומיות בישראל: Goupil G4 חשמלי, GREENMAN UF2+2 חשמלי ו-Polaris Ranger Diesel 2026. ניקיון, תחזוקה ושטח — בחשמל מלא או בדיזל.",
   openGraph: {
-    title: "DLB Motosport — רכב תפעולי לרשויות מקומיות",
-    description:
-      "שלושה כלים, שלושה צרכים — ניקיון, תחזוקה ושטח. בחשמל מלא או בדיזל.",
+    title: "לפרטים נוספים לחץ כאן",
+    description: "מוטוספורט · קבוצת דוד לובינסקי",
+    url: "/",
+    siteName: "DLB Motosport",
     locale: "he_IL",
     type: "website",
+    images: [
+      {
+        url: "/og-banner.jpg",
+        width: 1200,
+        height: 900,
+        alt: "מוטוספורט — נבחרת מנצחת: שלוש פתרונות תפעוליים",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "לפרטים נוספים לחץ כאן",
+    description: "מוטוספורט · קבוצת דוד לובינסקי",
+    images: ["/og-banner.jpg"],
   },
 };
 
