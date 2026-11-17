@@ -442,13 +442,14 @@ export default function Page() {
           <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
           <FeatureGrid
             items={[
-              { Icon: I.Shield, text: "מבית LVTONG, מותג מוכר בישראל בתחום הרכב התפעולי" },
+              { Icon: I.Award, text: "מבית LVTONG, מותג מוכר בישראל בתחום הרכב התפעולי" },
               { Icon: I.Zap, text: "הנעה 100% חשמלית" },
               { Icon: I.Thermometer, text: "תא נהג סגור עם מיזוג אוויר לחימום וקירור" },
               { Icon: I.Dump, text: "ארגז מטען מתרומם חשמלית לפריקה נוחה" },
               { Icon: I.Weight, text: 'כושר העמסה של עד 375 ק"ג' },
               { Icon: I.Route, text: 'טווח נסיעה של עד 70 ק"מ בין טעינות' },
               { Icon: I.Steering, text: "הגה כוח חשמלי לתמרון נוח" },
+              { Icon: I.Shield, text: "שנה אחריות + 2 שנים על הסוללה" },
             ]}
           />
 

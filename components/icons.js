@@ -207,3 +207,10 @@ export const Dump = (p) => (
     <path d="m12 4 1 3" />
   </Svg>
 );
+
+export const Award = (p) => (
+  <Svg {...p}>
+    <circle cx="12" cy="8" r="6" />
+    <path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11" />
+  </Svg>
+);
