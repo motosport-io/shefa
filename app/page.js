@@ -10,6 +10,7 @@ const PHONE_TEL = "0503636365";
 
 const NAV = [
   { id: "goupil-g4", label: "Goupil G4" },
+  { id: "mover", label: "MOVER" },
   { id: "greenman-uf2", label: "GREENMAN" },
   { id: "polaris-ranger", label: "Polaris" },
   { id: "lead-form", label: "צור קשר" },
@@ -90,6 +91,10 @@ const LOGOS = {
     normal: { src: "/logos/goupil.webp", box: "w-[80px] sm:w-[94px]", img: "h-6 sm:h-7" },
     white: { src: "/logos/goupil-white.webp", box: "w-[83px] sm:w-[95px]", img: "h-[29px] sm:h-[33px]" },
   },
+  MOVER: {
+    normal: { src: "/logos/mover.webp", box: "w-[191px] sm:w-[223px]", img: "h-6 sm:h-7" },
+    white: { src: "/logos/mover.webp", box: "w-[191px] sm:w-[223px]", img: "h-6 sm:h-7" },
+  },
   GREENMAN: {
     normal: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
     white: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
@@ -149,6 +154,7 @@ function SectionHeader({ index, accent, title, brand, badge, badgeClass, subtitl
 
 const ACCENTS = {
   goupil: "#0ea5e9",
+  mover: "#2b4c9b",
   greenman: "#16a34a",
   polaris: "#f59e0b",
 };
@@ -270,7 +276,7 @@ export default function Page() {
               {/* stats */}
               <Reveal delay={4} className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-8">
                 {[
-                  ["3", "כלים תפעוליים"],
+                  ["4", "כלים תפעוליים"],
                   ["100%", "אופציית חשמל"],
                   ["4×4", "יכולת שטח"],
                 ].map(([n, l]) => (
@@ -286,15 +292,23 @@ export default function Page() {
             <Reveal delay={2} className="relative">
               <div className="absolute inset-6 rounded-[2rem] bg-electric/20 blur-3xl" />
               <div className="relative animate-float-slow rounded-[2rem] border border-white/15 bg-white/5 p-3 shadow-float backdrop-blur">
-                <div style={{ "--accent": ACCENTS.goupil }}>
-                  <ImageFrame
-                    src="/images/g4-hp500-v3.webp"
-                    alt="Goupil G4 — תיבה סגורה"
-                    className="aspect-[16/11] !border-white/10 !bg-white"
-                    priority
-                  />
-                </div>
-                <div className="mt-3 grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3">
+                  <div style={{ "--accent": ACCENTS.goupil }}>
+                    <ImageFrame
+                      src="/images/g4-hp500-v3.webp"
+                      alt="Goupil G4"
+                      className="aspect-[4/3] !border-white/10 !bg-white"
+                      priority
+                    />
+                  </div>
+                  <div style={{ "--accent": ACCENTS.mover }}>
+                    <ImageFrame
+                      src="/images/mover-hero.webp"
+                      alt="MOVER"
+                      className="aspect-[4/3] !border-white/10 !bg-white"
+                      priority
+                    />
+                  </div>
                   <div style={{ "--accent": ACCENTS.greenman }}>
                     <ImageFrame
                       src="/images/greenman-uf2.webp"
@@ -392,7 +406,119 @@ export default function Page() {
           </Reveal>
         </section>
 
-        {/* ---------------- Vehicle 2: GREENMAN UF2+2 ---------------- */}
+        {/* ---------------- Vehicle 2: MOVER ---------------- */}
+        <section
+          id="mover"
+          className="container-page scroll-mt-24 py-20 sm:py-24"
+          style={{ "--accent": ACCENTS.mover }}
+        >
+          <Reveal>
+            <SectionHeader
+              index="2"
+              accent={ACCENTS.mover}
+              title="MOVER"
+              brand="MOVER"
+              badge="חשמלי 100%"
+              badgeClass="border-blue-200 bg-blue-50 text-blue-700"
+              subtitle="רכב משא 100% חשמלי מבית LVTONG"
+            />
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+              ה-MOVER מבית LVTONG הוא רכב משא תפעולי 100% חשמלי, המשלב יכולות עבודה עם
+              נוחות שימוש יומיומית. הרכב מצויד בתא נהג סגור עם מיזוג אוויר לחימום
+              וקירור, ארגז מטען מתרומם חשמלית וכושר העמסה של עד 375 ק&quot;ג. עם טווח
+              נסיעה של עד 70 ק&quot;מ ומבנה קומפקטי, הוא מתאים למשימות תחזוקה, שינוע
+              ציוד ועבודה שוטפת ברשויות מקומיות, במתחמי תעשייה ובשטחים תפעוליים.
+            </p>
+          </Reveal>
+
+          <Reveal className="mt-10">
+            <ImageFrame
+              src="/images/mover-hero.webp"
+              alt="MOVER — רכב משא חשמלי מבית LVTONG"
+              className="aspect-[16/10]"
+            />
+          </Reveal>
+
+          <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
+          <FeatureGrid
+            items={[
+              { Icon: I.Shield, text: "מבית LVTONG, מותג מוכר בישראל בתחום הרכב התפעולי" },
+              { Icon: I.Zap, text: "הנעה 100% חשמלית" },
+              { Icon: I.Thermometer, text: "תא נהג סגור עם מיזוג אוויר לחימום וקירור" },
+              { Icon: I.Dump, text: "ארגז מטען מתרומם חשמלית לפריקה נוחה" },
+              { Icon: I.Weight, text: 'כושר העמסה של עד 375 ק"ג' },
+              { Icon: I.Route, text: 'טווח נסיעה של עד 70 ק"מ בין טעינות' },
+              { Icon: I.Steering, text: "הגה כוח חשמלי לתמרון נוח" },
+            ]}
+          />
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            <Reveal>
+              <h3 className="mb-5 text-2xl font-black text-ink">מפרט טכני</h3>
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft">
+                <table className="w-full text-right text-[15px]">
+                  <tbody>
+                    {[
+                      ["סוג הנעה", "100% חשמלית"],
+                      ["מנוע", "מנוע חשמלי LVTONG AC 60V"],
+                      ["סוללה", "150Ah"],
+                      ["טווח נסיעה", 'עד 70 ק"מ'],
+                      ["מהירות מרבית", '45 קמ"ש'],
+                      ["זמן טעינה", "עד 6 שעות"],
+                      ["כושר העמסה", '375 ק"ג'],
+                      ["מספר נוסעים", "2 (נהג + נוסע)"],
+                      ["ארגז מטען", "פתוח עם מנגנון הרמה חשמלי"],
+                      ["מיזוג אוויר", "חשמלי, קירור וחימום, 800W"],
+                      ["משקל הרכב כולל סוללה", '829 ק"ג'],
+                      ["מרווח גחון", '150 מ"מ'],
+                    ].map(([k, v], i) => (
+                      <tr key={k} className={i % 2 ? "bg-slate-50/70" : "bg-white"}>
+                        <th scope="row" className="w-1/2 border-b border-slate-100 px-4 py-3 font-bold text-ink">
+                          {k}
+                        </th>
+                        <td className="border-b border-slate-100 px-4 py-3 text-slate-700">{v}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+
+            <Reveal delay={2}>
+              <h3 className="mb-5 text-2xl font-black text-ink">אבזור</h3>
+              <div className="flex flex-wrap gap-2.5">
+                {[
+                  "מזגן חשמלי עם קירור וחימום",
+                  "ארגז מטען עם מנגנון הרמה חשמלי",
+                  "הגה כוח חשמלי",
+                  "תאורת LED",
+                  "פנס אזהרה מהבהב בגג",
+                  "חגורות בטיחות עם 3 נקודות עיגון",
+                  "זמזם נסיעה לאחור",
+                  "שמשה קדמית עם מגב ומתז",
+                  "נגן מולטימדיה",
+                  "שקע 12V",
+                  "מתג כיבוי חירום",
+                ].map((c) => (
+                  <span key={c} className="chip">
+                    <I.Check className="h-4 w-4" style={{ color: ACCENTS.mover }} />
+                    {c}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-6 text-sm text-slate-500">
+                התמונות להמחשה בלבד · טווח הנסיעה עשוי להשתנות בהתאם לתנאי השימוש ·
+                ט.ל.ח.
+              </p>
+              <button onClick={() => goToForm("MOVER")} className="btn-primary mt-6">
+                בקשת הצעה / תיאום הדגמה
+                <I.ArrowLeft className="h-5 w-5" />
+              </button>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ---------------- Vehicle 3: GREENMAN UF2+2 ---------------- */}
         <section
           id="greenman-uf2"
           className="scroll-mt-24 bg-slate-50 py-20 sm:py-24"
@@ -401,7 +527,7 @@ export default function Page() {
           <div className="container-page">
             <Reveal>
               <SectionHeader
-                index="2"
+                index="3"
                 accent={ACCENTS.greenman}
                 title="GREENMAN UF2+2"
                 brand="GREENMAN"
@@ -503,7 +629,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ---------------- Vehicle 3: Polaris Ranger Diesel ---------------- */}
+        {/* ---------------- Vehicle 4: Polaris Ranger Diesel ---------------- */}
         <section
           id="polaris-ranger"
           className="container-page scroll-mt-24 py-20 sm:py-24"
@@ -511,7 +637,7 @@ export default function Page() {
         >
           <Reveal>
             <SectionHeader
-              index="3"
+              index="4"
               accent={ACCENTS.polaris}
               title="Polaris Ranger Diesel 2026"
               brand="POLARIS"
@@ -588,7 +714,7 @@ export default function Page() {
               <span className="eyebrow border-white/15 bg-white/10 text-white">השוואה מהירה</span>
               <h2 className="mt-4 text-3xl font-black sm:text-4xl">איזה כלי מתאים לרשות שלכם?</h2>
             </Reveal>
-            <div className="mt-12 grid gap-5 md:grid-cols-3">
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
                   name: "Goupil G4",
@@ -597,6 +723,14 @@ export default function Page() {
                   load: "העמסה גבוהה · מודולרי",
                   fit: "לוגיסטיקה ותחזוקה עירונית",
                   tag: "Goupil G4",
+                },
+                {
+                  name: "MOVER",
+                  accent: ACCENTS.mover,
+                  drive: "100% חשמלית",
+                  load: '375 ק"ג',
+                  fit: "תחזוקה, תפעול ושינוע ציוד",
+                  tag: "MOVER",
                 },
                 {
                   name: "GREENMAN UF2+2",

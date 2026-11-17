@@ -4,6 +4,7 @@ export const runtime = "nodejs";
 
 const VEHICLES = [
   "Goupil G4",
+  "MOVER",
   "GREENMAN UF2+2",
   "Polaris Ranger Diesel 2026",
   "לא בטוח/ייעוץ",

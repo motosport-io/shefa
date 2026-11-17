@@ -193,3 +193,17 @@ export const ArrowLeft = (p) => (
     <path d="M19 12H5M12 19l-7-7 7-7" />
   </Svg>
 );
+
+export const Thermometer = (p) => (
+  <Svg {...p}>
+    <path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0Z" />
+  </Svg>
+);
+
+export const Dump = (p) => (
+  <Svg {...p}>
+    <path d="M3 18h15l3-8-11-4-7 12Z" />
+    <path d="M3 18v2h18" />
+    <path d="m12 4 1 3" />
+  </Svg>
+);
