@@ -92,8 +92,8 @@ const LOGOS = {
     white: { src: "/logos/goupil-white.webp", box: "w-[83px] sm:w-[95px]", img: "h-[29px] sm:h-[33px]" },
   },
   MOVER: {
-    normal: { src: "/logos/mover.webp", box: "w-[191px] sm:w-[223px]", img: "h-6 sm:h-7" },
-    white: { src: "/logos/mover.webp", box: "w-[191px] sm:w-[223px]", img: "h-6 sm:h-7" },
+    normal: { src: "/logos/mover.webp", box: "w-[135px] sm:w-[159px]", img: "h-[17px] sm:h-[20px]" },
+    white: { src: "/logos/mover.webp", box: "w-[135px] sm:w-[159px]", img: "h-[17px] sm:h-[20px]" },
   },
   GREENMAN: {
     normal: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
