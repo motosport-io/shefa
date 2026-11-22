@@ -333,6 +333,7 @@ export default function Page() {
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-t border-white/10 pt-8 text-white/60">
               <span className="text-sm font-bold text-white/40">מותגים מובילים:</span>
               <BrandLogo name="GOUPIL" light />
+              <BrandLogo name="MOVER" light />
               <BrandLogo name="GREENMAN" light />
               <BrandLogo name="POLARIS" light />
             </div>
@@ -845,6 +846,7 @@ export default function Page() {
               <span className="text-slate-600">|</span>
               <span className="text-sm font-bold text-slate-400">מותגים:</span>
               <BrandLogo name="GOUPIL" light />
+              <BrandLogo name="MOVER" light />
               <BrandLogo name="GREENMAN" light />
               <BrandLogo name="POLARIS" light />
             </div>
