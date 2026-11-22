@@ -96,8 +96,8 @@ const LOGOS = {
     white: { src: "/logos/mover.webp", box: "w-[135px] sm:w-[159px]", img: "h-[17px] sm:h-[20px]" },
   },
   GREENMAN: {
-    normal: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
-    white: { src: "/logos/greenman-logo.webp", box: "w-[152px] sm:w-[178px]", img: "h-[163px] sm:h-[190px]" },
+    normal: { src: "/logos/greenman-logo.webp", box: "w-[125px] sm:w-[146px]", img: "h-[134px] sm:h-[156px]" },
+    white: { src: "/logos/greenman-logo.webp", box: "w-[125px] sm:w-[146px]", img: "h-[134px] sm:h-[156px]" },
   },
   POLARIS: {
     normal: { src: "/logos/polaris.webp", box: "w-[101px] sm:w-[118px]", img: "h-6 sm:h-7" },
