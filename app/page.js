@@ -432,12 +432,17 @@ export default function Page() {
             </p>
           </Reveal>
 
-          <Reveal className="mt-10">
+          {/* Gallery */}
+          <Reveal className="mt-10 space-y-4">
             <ImageFrame
               src="/images/mover-hero.webp"
               alt="MOVER — רכב משא חשמלי מבית LVTONG"
               className="aspect-[16/10]"
             />
+            <div className="grid grid-cols-2 gap-4 lg:mx-auto lg:max-w-3xl">
+              <ImageFrame src="/images/mover-side.webp" alt="MOVER — מבט צד" className="aspect-[4/3]" />
+              <ImageFrame src="/images/mover-rear.webp" alt="MOVER — מבט אחורי" className="aspect-[4/3]" />
+            </div>
           </Reveal>
 
           <Reveal as="h3" className="mb-5 mt-12 text-2xl font-black text-ink">יתרונות עיקריים</Reveal>
